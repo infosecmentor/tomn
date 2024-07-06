@@ -327,26 +327,39 @@
 
 		// object fit
 
-		objectFitImages()
+		// objectFitImages()
 
 		// menu trigger
 
-		function menuTrigger() {
+		//function menuTrigger() {
 
-			const trigger = $('.hamburger')
+		//	const trigger = $('.hamburger')
 
-			if (!trigger.length) return
+		//	if (!trigger.length) return
 
-			$('.hamburger').on('click', function() {
+		//	$('.hamburger').on('click', function() {
 
-				$('body').toggleClass('body--static')
-				$('.menu-dropdown').toggleClass('menu-dropdown--active')
+		//		$('body').toggleClass('body--static')
+		//		$('.menu-dropdown').toggleClass('menu-dropdown--active')
 	
-			})
+		//	})
 			
-		}
+	//	}
 
-		menuTrigger()
+	//	menuTrigger()
+	//comented out above added this below
+	const hamburger = document.querySelector('.hamburger');
+        const mainMenu = document.querySelector('.main-menu');
+
+            	hamburger.addEventListener('click', () => {
+	        hamburger.classList.toggle('is-active');
+            	mainMenu.classList.toggle('is-active');
+		//end of my added file
+    });
+	document.querySelectorAll(".main-menu__link").forEach(n=>n.addEventListener('click',()=>{
+		hamburger.classList.remove('is-active');
+		mainMenu.classList.remove('is-active');
+	}))
 
 		// mobile menu
 
