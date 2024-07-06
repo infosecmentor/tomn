@@ -17800,7 +17800,7 @@ a:hover {
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::after,
 .hamburger.is-active .hamburger-inner::before {
-   background-color: #fff
+   background-color: black
 }
 
 .hamburger.is-active .hamburger-inner {
@@ -23777,5 +23777,68 @@ section.instagram {
 .footer--front_5 .socials__link {
    font-size: 20px
 }
+@media (max-width: 768px) {
+   .hamburger {
+      display: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .hamburger-box {
+      width: 30px;
+      height: 24px;
+      display: inline-block;
+      position: relative;
+    }
+    
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      width: 30px;
+      height: 3px;
+      background-color: #333;
+      border-radius: 4px;
+      position: absolute;
+      transition-property: transform;
+      transition-duration: 0.15s;
+      transition-timing-function: ease;
+    }
+    
+    .hamburger-inner {
+      display: block;
+      top: 50%;
+      margin-top: -1.5px;
+    }
+    
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      content: "";
+      display: block;
+    }
+    
+    .hamburger-inner::before {
+      top: -10px;
+    }
+    
+    .hamburger-inner::after {
+      bottom: -10px;
+    }
+    
+    @media (max-width: 991px) {
+      .main-menu {
+        display: none;
+      }
+    
+      .hamburger {
+        display: inline-block;
+      }
+    
+      .main-menu.is-active,
+      .hamburger.is-active {
+        display: block;
+      }
+    }
+    
+
 
 /*# sourceMappingURL=styles.min.css.map */
